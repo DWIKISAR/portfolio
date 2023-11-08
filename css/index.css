@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg: #dce0e4;
+  --orange: #fe4e30;
+  --nav: #ebebeb;
+}
+
+* {
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+}
+.my-image img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.my-image figcaption {
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.my-image figcaption h1 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.my-image figcaption p {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.home .my-project {
+  color: black;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  margin: 40px;
+  margin-top: 7rem;
+  padding: 45px;
+  background-color: #ffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.4rem;
+}
+
+.my-profil {
+  width: 100%;
+  padding-bottom: 12px;
+  text-align: justify;
+}
+
+.my-contact {
+  text-decoration: none;
+  padding: 5px 14px;
+  margin: 15px 0;
+  background-color: black;
+  color: #ffff;
+  border-radius: 1.4rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.my-contact:hover {
+  background-color: var(--orange);
+}
+
+.contact-sosial {
+  list-style-type: none;
+  margin: 16 0px;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 2em;
+  color: black;
+}
+
+.contact-sosial > li {
+  display: inline-block;
+  margin: 20px 8px;
+}
+
+.contact-sosial i:hover {
+  color: var(--orange);
+}
+.sosial {
+  color: black;
+}
+.link-down {
+  display: inline;
+  margin-left: 16px;
+  text-decoration: none;
+  color: black;
+}
+.link-down i:hover {
+  color: var(--orange);
+}
+
+.link-down:hover {
+  color: var(--orange);
+}
+.sosial:hover {
+  color: var(--orange);
+}
+
+.my-image {
+  margin: 0;
+  margin-left: 24px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.3rem;
+}
