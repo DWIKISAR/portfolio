@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg: #dce0e4;
+  --orange: #fe4e30;
+  --nav: #ebebeb;
+  --btn: #111727;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+
+/* container Testimonial Star*/
+.container {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container h1 {
+  margin: 2rem;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.testimonial {
+  width: 25%;
+  margin: 0 15px 30px 15px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px gray;
+}
+
+.testimonial img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-testimonial {
+  width: 100%;
+}
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.author {
+  font-weight: bold;
+  text-align: right;
+}
+/* container Testimonial End*/
+
+/* Media Queris Star */
+/* Phone Mobile */
+@media (max-width: 450px) {
+  .testimonial {
+    width: 80%;
+  }
+  .container {
+    justify-content: center;
+  }
+}

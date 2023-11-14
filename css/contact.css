@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg: #dce0e4;
+  --orange: #fe4e30;
+  --nav: #ebebeb;
+}
+
+* {
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Form Login Star*/
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  padding: 7px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  background-color: #ffff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 0.5px solid #c9c7c7;
+  resize: none;
+}
+
+.submit .btn-submit {
+  background-color: var(--nav);
+  color: white;
+  margin-top: 10px;
+  padding: 3px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  float: right;
+}
+
+.submit .btn-submit:hover {
+  background-color: var(--orange);
+}
+
+form .form-login {
+  background: var(--cont);
+  width: 35%;
+  padding: 40px 40px;
+  margin-top: 2rem;
+  border-radius: 7px;
+}
+
+.form-login h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.form-input {
+  padding-top: 20px;
+}
+
+.submit .btn-submit {
+  width: auto;
+  margin: 10px 0;
+  background-color: #111727;
+}
+
+/* Media Queris */
+/* Phone Mobile */
+@media (max-width: 450px) {
+  form .form-login {
+    width: 80%;
+  }
+
+  .form-login h1 {
+    font-size: 24px;
+  }
+
+  .form-input {
+    padding-top: 10px;
+  }
+
+  .form-input label {
+    font-size: 12px;
+  }
+
+  .form-input input,
+  option {
+    font-size: 9px;
+  }
+  input,
+  select,
+  textarea {
+    padding: 5px;
+    margin-bottom: 0;
+  }
+
+  .submit .btn-submit {
+    font-size: 12px;
+    padding: 2px 12px;
+  }
+}
