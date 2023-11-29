@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Blog</title>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/project-detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-left">
+          <ul>
+            <li>
+              <a href="https://dumbways.id/"
+                ><img src="/img/logo.png" alt="logo-dumbways"
+              /></a>
+            </li>
+            <li class="item-collapse">
+              <a href="/">Home</a>
+            </li>
+            <li class="item-collapse">
+              <a href="myproject-detail" class="active">My Project</a>
+            </li>
+           
+          </ul>
+        </div>
+        <div class="nav-right item-collapse">
+          <ul>
+            <li>
+              <a href="contact" class="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right" id="hamburger-menu">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger()"
+          >
+            <i class="fa-2x fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <div class="container-hamburger">
+        <a href="/"> Home </a>
+        <a href="myproject" class="active" target="_blank"> My Project </a>
+        <div class="contact-me">
+          <a href="contact" class="hamburger-contact-me">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section one Start -->
+    <main>
+      <div class="section-one">
+        <div class="container">
+          <div class="title">
+            <h2>UPDATE MY PROJECT</h2>
+          </div>
+          <div class="form-container">
+             <form
+              {{!-- onsubmit="
+                  addMyProject(event)" --}}
+                  method="post"
+                  action="/updateBlog"
+            >
+                <input type="hidden" name="id" value="{{data.id}}">
+              <div>
+                
+                <label for="nama-project">Project Name</label>
+              </div>
+              <div class="project-name">
+                <input type="text" name="title" id="nama-project" value="{{data.title}}"/>
+              </div>
+              <div class="project-time">
+                <div>
+                  <label for="start-date">Start Date</label>
+                  <input type="date" name="startDate" id="start-date" />
+                </div>
+                <div>
+                  <label for="end-date">End Date</label>
+
+                  <input type="date" name="endDate" id="end-date" />
+                </div>
+              </div>
+
+              <div>
+                <label for="desc-project">Description</label>
+              </div>
+              <div>
+                <textarea class="desc-project" name="content" id="desc-project"> {{data.content}} </textarea>
+              </div>
+
+              <div>
+                <div><label>Technologies</label></div>
+
+                <div class="tech-option">
+                  <div>
+                    <div>
+                      <input type="checkbox" name="nodejs" id="node-js" value="nodejs" />
+                      <label for="node-js">Node Js</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="nextjs" id="next-js" value="nextjs" />
+                      <label for="next-js">Next Js</label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <input type="checkbox" name="reactjs" id="react-js" value="reactjs" />
+                      <label for="react-js">React Js</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="typescript"
+                        id="typescript"
+                        value="typescript"
+                      />
+                      <label for="typescript">Typescript</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label>Upload image</label>
+
+                <label class="input-blog-image">
+                  <div class="text">Choose</div>
+                  <div>
+                    <img src="/img/file.png" />
+                    <input type="file" name="inputimg" id="input-blog-image" hidden />
+                  </div>
+                </label>
+              </div>
+
+              <div class="submit-button-container">
+                <button type="submit" class="submit-button">Update Blog</button>
+              </div>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+   
+      </div>
+    </main>
+    <script src="/javaScript/hamburger.js"></script>
+  </body>
+</html>
