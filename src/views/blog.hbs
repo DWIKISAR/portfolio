@@ -25,10 +25,10 @@
               /></a>
             </li>
             <li class="item-collapse">
-              <a href="/">Home</a>
+              <a href="/" >Home</a>
             </li>
             <li class="item-collapse">
-              <a href="myproject-detail" class="active">My Project</a>
+              <a href="myproject-detail" >My Project</a>
             </li>
           </ul>
         </div>
@@ -67,15 +67,15 @@
       {{#each data}}
         <div class="project-list">
           <div class="project-list-items">
-            <img src="/img/life.jpg" alt="code" />
+            <img src="/img/{{this.image}}" alt="code" />
             <h1>
-              <a href="myproject" target="_blank" name="title" >{{@index}} {{this.id}} | {{this.title}}</a>
+              <a href="myproject" target="_blank" name="title" > {{this.name}}</a>
             </h1>
             <div class="durasi">
-              <p class="durasi">Durasi : 1 Bulan</p>
+              <p class="durasi" name="months">{{this.start_date}} | {{this.end_date}}</p>
             </div>
             <p>
-              {{this.content}}
+              {{this.description}}
             </p>
 
             <i class="fa-brands fa-node-js"></i>

@@ -2,6 +2,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = 3000;
+const config = require("./src/config/config.json");
+const { Sequelize, QueryTypes } = require("sequelize");
+const sequelize = new Sequelize(config.development);
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "src/views"));
@@ -46,8 +49,12 @@ function contact(req, res) {
   res.render("contact");
 }
 
-function blog(req, res) {
-  res.render("blog", { data });
+async function blog(req, res) {
+  const query = "SELECT * FROM projects";
+  const pro = await sequelize.query(query, { type: QueryTypes.SELECT });
+  console.log("ini project", pro);
+
+  res.render("blog", { data: pro });
 }
 
 function deleteBlog(req, res) {
@@ -90,7 +97,6 @@ function addBlog(req, res) {
     typescript,
     inputimg,
   };
-
   data.unshift(dataBlog);
   res.redirect("/blog");
 }
