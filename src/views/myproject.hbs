@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-left">
+          <ul>
+            <li>
+              <a href="https://dumbways.id/"
+                ><img src="/img/logo.png" alt="logo-dumbways"
+              /></a>
+            </li>
+            <li class="item-collapse">
+              <a href="/">Home</a>
+            </li>
+            <li class="item-collapse">
+              <a href="myproject-detail" class="active">My Project</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="nav-right item-collapse">
+          <ul>
+            <li>
+              <a href="contact" class="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right" id="hamburger-menu">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger()"
+          >
+            <i class="fa-2x fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <div class="container-hamburger">
+        <a href="/"> Home </a>
+        <a href="myproject-detail" class="active"> My Project </a>
+        <div class="contact-me">
+          <a href="contact" class="hamburger-contact-me">Contact</a>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="project-detail">
+      <h1 class="judul">Dumbways Web App</h1>
+      <div class="information">
+        <img src="/img/life.jpg" alt="life" />
+        <div class="type-data">
+          <h2>Duration</h2>
+          <i class="fa-regular fa-calendar-days fa-xl"></i>
+          <label>11 Sep 2023 - 11 Okt 2023</label><br /><br />
+          <i class="fa-regular fa-clock fa-xl"></i>
+          <label>1 Month</label>
+          <h2>Technologies</h2>
+          <div class="project-icon">
+            <div class="type">
+              <i class="fa-brands fa-react fa-xl"></i>
+              <label> React Js</label>s
+              <br />
+              <br />
+              <i class="fa-brands fa-node-js fa-xl"></i>
+              <label> Node Js</label>
+            </div>
+
+            <div class="type">
+              <i class="fa-brands fa-js fa-xl"></i>
+              <label> JavaScript</label><br /><br />
+              <i class="fa-brands fa-golang fa-xl"></i>
+              <label>Golang</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
+        exercitationem quia doloremque? Temporibus accusamus tempora nulla
+        repellat ducimus doloribus laudantium quaerat. Quos illum quisquam
+        dolore repellat minus eos molestiae aperiam saepe ipsa magni expedita
+        autem optio quidem tempora, repudiandae vero exercitationem. Ipsa
+        corporis, officia iste odio minus fugiat blanditiis eos? Lorem ipsum
+        dolor, sit amet consectetur adipisicing elit. Cum quaerat, voluptates
+        officiis minus dolorem minima laborum asperiores accusantium saepe.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum
+        blanditiis dolorem repudiandae sint provident quidem accusantium cum
+        unde impedit. In eligendi iure obcaecati assumenda, fugit voluptatibus
+        aspernatur ex velit.
+      </p>
+    </div>
+    <script src="/javaScript/hamburger.js"></script>
+  </body>
+</html>
