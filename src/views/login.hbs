@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/navbar.css " />
+    <link rel="stylesheet" href="/css/contact.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@1,9..40&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-left">
+          <ul>
+            <li>
+              <a href="https://dumbways.id/"
+                ><img src="/img/logo.png" alt="logo-dumbways"
+              /></a>
+            </li>
+            <li class="item-collapse">
+              <a href="/">Home</a>
+            </li>
+            <li class="item-collapse">
+              <a href="/myproject-detail">My Project</a>
+            </li>
+           
+          </ul>
+        </div>
+        <div class="nav-right item-collapse">
+          <ul>
+             {{#if isLogin }}
+             <li>
+                <p>Welcome, {{user.name}}</p>
+             </li>
+              <li>
+                <button class="btn-logout">Logout</button>
+             </li>
+                {{else}}
+              <li>
+                 <a href="/login" class="active">Login</a> 
+              </li>
+              <li>
+                 <a href="/register">Register</a>
+                {{/if}}
+              </li>
+            <li>
+              <a href="contact" class="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right" id="hamburger-nav-container">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger()"
+          >
+            <i class="fa-2x fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <div class="container-hamburger">
+        <a href="/" class="active"> Home </a>
+        <a href="/myproject-detail"> My Project </a>
+        <div class="contact-me">
+          <a href="contact" class="hamburger-contact-me">Contact</a>
+        </div>
+      </div>
+    </div>
+      {{#if messages.danger}}
+  <div class="alert-danger" role="alert">
+    <div class="container">
+      <p>{{messages.danger}}</p>
+    </div>
+  </div>
+  {{/if}}
+
+    <!-- Form Contact -->
+    <form  method="post" action="/login">
+      <div class="form-login">
+        <h1>LOGIN TO YOUR ACCOUNT</h1>
+        <div class="form-input">
+          <label>Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-input">
+          <label>Password</label>
+          <input type="password"  name="password" id="password" required />
+        </div>
+       
+    
+        <div class="submit">
+          <button class="btn-submit" type="submit">
+            submit
+          </button>
+        </div>
+      </div>
+    </form>
+    <script src="/javaScript/hamburger.js"></script>
+  </body>
+</html>
