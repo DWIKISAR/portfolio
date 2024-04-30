@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg: #dce0e4;
+  --nav: rgb(243, 243, 243);
+  --orange: #fe4e30;
+  --btn: #111727;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+/*navbar star*/
+.navbar {
+  display: flex;
+  background-color: var(--nav);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+nav {
+  display: flex;
+  height: 1.1em;
+  width: 100vw;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding-left: 45px;
+}
+
+nav ul li {
+  margin-right: 25px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+}
+.nav-left {
+  flex: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left ul a:hover {
+  color: var(--orange);
+}
+.nav-left img {
+  display: flex;
+  align-items: center;
+  width: 4%;
+  padding: 20px 0;
+}
+
+.nav-right {
+  display: flex;
+  text-align: end;
+  justify-content: flex-end;
+}
+
+.nav-right ul li a:hover {
+  color: var(--orange);
+}
+
+.nav-right ul li p {
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+}
+.nav-right .btn-logout:hover {
+  color: var(--orange);
+}
+
+.contact {
+  background-color: #111727;
+  padding: 2px 12px;
+  color: white;
+  font-size: 14px;
+  border-radius: 55px;
+  text-decoration: none;
+}
+.nav-right li .contact:hover {
+  background-color: var(--orange);
+  color: #ffff;
+}
+
+.active {
+  font-weight: bold;
+}
+
+/* Alert login Start */
+.alert-success {
+  display: block;
+  margin-top: 33px;
+}
+
+.alert-success .container {
+  background-color: rgb(209, 231, 221);
+}
+
+.alert-success .container p {
+  display: block;
+  color: #678879;
+  padding: 10px 40px;
+}
+
+.alert-danger {
+  display: block;
+  margin-top: 33px;
+}
+
+.alert-danger .container {
+  background-color: rgb(248, 215, 218);
+}
+
+.alert-danger .container p {
+  display: block;
+  color: #803440;
+  padding: 10px 40px;
+}
+
+.btn-logout {
+  border: none;
+  cursor: pointer;
+}
+
+/* Hambuerger Menu Start*/
+#hamburger-menu {
+  display: none;
+}
+
+.hamburger-nav-container {
+  font-size: 23px;
+  list-style-type: none;
+  display: none;
+  padding: 23px;
+}
+
+.container-hamburger a:hover {
+  color: var(--orange);
+}
+
+.contact-me .hamburger-contact-me:hover {
+  color: #ffff;
+  background-color: var(--orange);
+}
+/* Hambuerger Menu End*/
+
+/* Media Queris */
+/* Tablet */
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: inline-block;
+    transition: 0.3s;
+  }
+  .navbar .item-collapse {
+    position: absolute;
+    top: 100%;
+    right: -150%;
+    background-color: var(--bg-body);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .hamburger-nav-container {
+    background-color: var(--nav);
+  }
+
+  .hamburger-nav-container a {
+    text-decoration: none;
+    color: #575656;
+    background-color: var(--bg-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 17px;
+  }
+
+  .hamburger-nav-container a:hover {
+    color: var(--orange);
+  }
+}
+/* Phone Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55;
+  }
+
+  .nav-left img {
+    width: 75%;
+  }
+  .hamburger-nav-container a {
+    font-size: 14px;
+  }
+  .contact-me {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact-me .hamburger-contact-me {
+    background-color: var(--btn);
+    padding: 1px 10px;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+  }
+}
